@@ -1,0 +1,35 @@
+{% extends "main_page/base.html" %}
+{% block content %}
+        <aside id="colorlib-breadcrumbs">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 breadcrumbs text-center">
+						<h2>Delete</h2>
+						<p><span><a href="{% url 'blog-home' %}">Home</a></span> / <span>Delete Post</span></p>
+					</div>
+				</div>
+			</div>
+		</aside>
+
+		<div id="colorlib-container">
+			<form method="POST">
+				{% csrf_token %}
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<img class="img-responsive" src="images/author.jpg" alt="">
+						</div>
+						<div class="col-md-6">
+							<blockquote>
+								Are you sure you want to delete the post "{{ object.title }}"
+							</blockquote>
+							<div class="form-group">
+								<button class="btn btn-outline-danger" type="submit">Yes, Delete</button>
+								<a class="btn btn-outline-secondary" href="{% url 'post-detail' object.id %}">Cancel</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+{% endblock content %}

@@ -1,0 +1,36 @@
+{% extends "main_page/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <div class="container">
+
+        <aside id="colorlib-breadcrumbs">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 breadcrumbs text-center">
+						<h2>Log In</h2>
+						<p><span><a href="{% url 'blog-home' %}">Home</a></span> / <span>Login</span></p>
+					</div>
+				</div>
+			</div>
+        </aside>
+
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                {{ form|crispy }}
+            </fieldset>
+            <div class="form-group">
+                <button class="btn btn-outline-info" type="submit">Login</button>
+                <small class="text-muted ml-2">
+                    <a href="{% url 'password_reset' %}">Forgot Password?</a>
+                </small>
+            </div>
+        </form>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>
+            </small>
+        </div>
+    </div>
+{% endblock content %}

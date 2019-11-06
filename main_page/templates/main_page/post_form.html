@@ -1,0 +1,33 @@
+{% extends "main_page/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="container">
+
+    <aside id="colorlib-breadcrumbs">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 breadcrumbs text-center">
+						<h2>Post</h2>
+						<p><span><a href="{% url 'blog-home' %}">Home</a></span> / <span>Post</span></p>
+					</div>
+				</div>
+			</div>
+   </aside>
+
+    <div class="row row-pb-md">
+        <div class="col-md-12">
+            <div class="blog-entry">
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <fieldset class="form-group">
+                        {{ form|crispy }}
+                    </fieldset>
+                    <div class="form-group">
+                        <button class="btn btn-outline-info" type="submit">Post</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+  </div>
+</div>
+{% endblock content %}

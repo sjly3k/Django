@@ -1,0 +1,26 @@
+{% extends "main_page/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <div class="container">
+
+        <aside id="colorlib-breadcrumbs">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 breadcrumbs text-center">
+						<h2>Logout</h2>
+						<p><span><a href="{% url 'blog-home' %}">Home</a></span> / <span>Logout</span></p>
+					</div>
+				</div>
+			</div>
+        </aside>
+        <br>
+        <h2>You have been logged out</h2>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                <a class="ml-2" href="{% url 'login' %}">Log In Again</a>
+            </small>
+        </div>
+        <br>
+    </div>
+{% endblock content %}

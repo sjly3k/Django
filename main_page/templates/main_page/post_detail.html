@@ -1,0 +1,42 @@
+{% extends "main_page/base.html" %}
+{% block content %}
+<div class="container">
+
+   <aside id="colorlib-breadcrumbs">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 breadcrumbs text-center">
+						<h2>Post Detail</h2>
+						<p><span><a href="{% url 'blog-home' %}">Home</a></span> / <span>Post Detail</span></p>
+					</div>
+				</div>
+			</div>
+   </aside>
+
+  <div class="row row-pb-md">
+    <div class="col-md-12">
+		<div class="blog-entry">
+          <div class="blog-img">
+            <div class="blog-img">
+                <img src="{{object.image.url}}" class="img-responsive" alt="html5 bootstrap template">
+            </div>
+          </div>
+          <div class="desc">
+            <p class="meta">
+              <span class="date">{{ object.date_posted|date:"F d, Y" }}</span>
+              <span class="pos">By <a href="{% url 'user-posts' object.author %}">{{ object.author }}</a></span>
+            </p>
+            <h2>{{ object.title }}</h2>
+            <p>{{ object.content }}</p>
+            {% if object.author == user %}
+              <div>
+                <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>
+                <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

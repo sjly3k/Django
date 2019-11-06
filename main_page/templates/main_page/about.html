@@ -1,0 +1,35 @@
+{% extends "main_page/base.html" %}
+{% block content %}
+    <aside id="colorlib-breadcrumbs">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 breadcrumbs text-center">
+					<h2>About Me</h2>
+					<p><span><a href="{% url 'blog-home' %}">Home</a></span> / <span>About</span></p>
+				</div>
+			</div>
+		</div>
+	</aside>
+
+	<div id="colorlib-container">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<img class="img-responsive" src="/static/images/author.jpg" alt="">
+				</div>
+				<div class="col-md-6">
+					<p>Hi! My Name is <strong>Seung-Jin Lee</strong> Someone Who wants to be Machine Learning Engineer || Analyst || Web Backend Developer (Python + Django).</p>
+					<blockquote>
+						This project, we use Python + Django + Docker (Backend) + Templates (Frontend) + Tensorflow (Using CycleGAN) + GCP (VM for modeling with our datasets)
+					</blockquote>
+					<p>
+					<ul class="colorlib-social-icons">
+					<li><a href="https://www.github.com/sjly3k"><i class="icon-github"></i></a></li>
+					<li><a href="https://www.linkedin.com/in/%EC%8A%B9%EC%A7%84-%EC%9D%B4-75349818a/"><i class="icon-linkedin"></i></a></li>
+				</ul>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock content %}
