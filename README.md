@@ -16,11 +16,12 @@
 - <img src="/img/web_result_1.png" width="450px" height="300px" title="web_result_1_pic" alt="Web Result Picture 1"></img>
 - <img src="/img/web_result_2.png" width="450px" height="300px" title="web_result_2_pic" alt="Web Result Picture 2"></img>
 - <img src="/img/web_result_5.png" width="450px" height="300px" title="web_result_3_pic" alt="Web Result Picture 3"></img>
-- <img src="/img/web_result_3.png" width="450px" height="300px" title="web_result_4_pic" alt="Web Result Picture 4"></img>
-- <img src="/img/web_result_4.png" width="450px" height="300px" title="web_result_5_pic" alt="Web Result Picture 5"></img>
+- <img src="/img/web_result_3.png" width="450px" height="400px" title="web_result_4_pic" alt="Web Result Picture 4"></img>
+- <img src="/img/web_result_4.png" width="450px" height="400px" title="web_result_5_pic" alt="Web Result Picture 5"></img>
 
 **Result for Modeling**
 - <img src="/img/modeling_result_1.png" width="450px" height="300px" title="modeling_result_1_pic" alt="Modeling Result Picture 1"></img><br>
+
 ## Installation
 
 **Requirements**
